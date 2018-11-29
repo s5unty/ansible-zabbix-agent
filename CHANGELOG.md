@@ -4,6 +4,118 @@ Below an overview of all changes in the releases.
 
 Version (Release date)
 
+x.x.x  (unreleased)
+
+  * 
+
+1.5.0  (2018-10-19)
+
+  * Added installation on Windows
+  * Firewalld #166 (By pull request: 0utsider (Thanks!))
+  * Using same container as with the server #167
+  * Zabbix 4.0 now default installation
+  * enable support for https enabled zabbix frontends/apis #173 (By pull request: rolfvreijdenberger (Thanks!))
+
+1.4.0  (2018-09-11)
+
+  * Add configuration to prevent host updating via zabbix api #150 (By pull request: sblaisot (Thanks!))
+  * Handle encryption when adding host to zabbix server #151 (By pull request: sblaisot (Thanks!))
+  * Removed the warning message #156
+  * Updating versions to be installed #157
+  * Added 2nd Molecule Scenario #158
+  * Parameterizing userparameter deployment #159 (By pull request: rubentsirunyan (Thanks!))
+  * fix typo #160 (By pull request: kmonticolo (Thanks!))
+  * Reflect changed license in README #161 (By pull request: stephankn (Thanks!))
+  * remove deprecated loop #162 (By pull request: stephankn (Thanks!))
+  * Fix when running ansible in --check mode #163 (By pull request: AlbanAndrieu (Thanks!))
+
+1.3.0  (2018-06-23)
+
+  * fixes issue "Configure iptables task fail" #128 (By pull request: andreagrax (Thanks!))
+  * Fix travis docker #131
+  * Added several 'become: yes' to tasks #133
+  * Added gpg key id for agent version 3.0 in Debian Stretch #135 (By pull request: hatifnatt (Thanks!))
+  * Upgrade minimum Ansible version from 1.9 --> 2.4
+  * Added a License, Code of Conduct and some more files
+  * Fix for Misleading repo name #147
+  * fixes for the userparameter task #138 (By pull request: HNKNTA (Thanks!))
+  * Support for Debian 9 and Ubuntu 18.04
+  * Added fix for: Host autoregistered in zabbix with IP 0.0.0.0 when Lis… #141
+
+1.2.0  (2018-01-25)
+
+  * Fix for: Some RedHat subtask are missing become option #116
+  * Delete option "run_once" from task "Create hostgroups" #119 (By pull request: mgornikov (Thanks!))
+  * Fix the CI Travis build again.
+  * Fix for: Changing zabbix_version breaks role #117
+  * Added sonya #120
+  * Add clean all #121
+  * allow 127.0.0.1 for listenip #124 (By pull request: blodone (Thanks!))
+  * Get selinux status #125 (By pull request: andreagrax (Thanks!))
+  * Add new variable zabbix_visible_hostname #126 (By pull request: samyscoub (Thanks!))
+  * Replaced `yum` with `package` #127  (By pull request: average-joe (Thanks!))
+
+1.1.0  (2017-11-13)
+
+  * Add zabbix_ to agent_serveractive and agent_server #101 (By pull request: asosso (Thanks!))
+  * Fix typo #102 (By pull request: asosso (Thanks!))
+  * Added support for Zabbix host inventory mode #103 (By pull request: mgornikov (Thanks!))
+  * Trying to fix mint #105
+  * Do not report as change when update an existing host's info #107 (By pull request: asosso (Thanks!))
+  * Add default value for zabbix_inventory_mode #108 (By pull request: asosso (Thanks!))
+  * Added IPtables #111
+  * Added when for enabling repo when zabbix_repo==zabbix #112
+  * Added stretch for Zabbix 3.2 #115
+
+1.0.3  (2017-09-07)
+
+  * Fix attempt two for: zabbix_agent_listenip not working as expected #98
+  * Updated Molecule V1 test to Molecule V2. 
+
+1.0.2  (2017-09-03)
+
+  * Fix for: zabbix_agent_listenip not working as expected #98
+  * Fix for: s/agent_interfaces/zabbix_agent_interfaces #95 && 'agent_interfaces' is undefined #94
+  * Forgot to update documentation with the new variable names (Added the `zabbix_` prefixes.)
+
+1.0.1  (2017-08-31)
+
+  * Fix for: Error in: Create directory for PSK file if not exist
+
+1.0.0  (2017-08-30)
+
+  * From ini to yml style.
+  * Used yum instead of apt #78
+  * Installing default 3.4.
+  * Prefixed all properties that started with `agent_` with the value `zabbix_`.
+  * [DOCS] Fix readme for zabbix_api_create_hosts #82 (By pull request: Logan2211 (Thanks!))
+  * Workaround https://github.com/ansible/ansible-modules-core/issues/3764 #85 (By pull request: ma-tty (Thanks!))
+  * Added Mint #88
+  * Include Debian stretch in 3.4 #89  (By pull request: rtgibbons (Thanks!))
+  * Add creation of PSK file #90
+  * Fix for: Key-dependent repository installed before the key #80
+  * Set Molecule to V1 for now since V2 is released.
+
+0.10.0  (2017-07-25)
+
+  * Added run_once to only execute the task once #77
+  * Adds zabbix_selinux variable to README #75
+  * Adding tasks for selinux #74
+  * Fix type number of jmx/ipmi #65 (By pull request: fazelgh (Thanks!))
+  * zabbix_hostmacro fix #64 (By pull request: dguihal (Thanks!))
+  * Does not confuse with zabbix_api_use setting. #61 (By pull request: i5513 (Thanks!))
+  * get gpg key over https #60 (By pull request: sjugge (Thanks!))
+  * Using the same version handling as with the zabbix-server #59
+
+0.9.0   (2016-12-30)
+
+  * Fix hostname mistmatch when updating macros #54 (By pull request: tahajahangir (Thanks!))
+  * Update main.yml #52 (By pull request: envrm (Thanks!))
+  * Added zabbix.yml vars for correct apt_key id #48
+  * Updated to Zabbix 3.2.0 #47
+  * Fix missed tag #43 (By pull request: leominov (Thanks!))
+  * Set everything the same with agent_hostname
+
 0.8.0   (2016-08-24)
 
   * Added more tests for Molecule
